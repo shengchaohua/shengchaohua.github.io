@@ -4,9 +4,8 @@
   "description": "This repo is built with Vue Press.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs --clean-cache --clean-temp"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +17,9 @@
   },
   "directories": {
     "doc": "docs"
+  },
+  "packageManager": "pnpm@8.13.1",
+  "engines": {
+    "node": ">=18.16.0"
   }
 }
