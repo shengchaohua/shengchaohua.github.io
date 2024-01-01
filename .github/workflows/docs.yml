@@ -43,14 +43,13 @@ jobs:
       - name: Build documentation site
         run: pnpm docs:build
 
-#      # 复制根目录下的“百度网站收录认证文件”到构建的dist目录
-#      - name: Copy baidu-verify file
-#        uses: canastro/copy-file-action@master
-#        with:
-#          # 源文件目录
-#          source: baidu_verify_codeva-p5FuxDFHWV.html
-#          # 目标目录
-#          target: docs/.vuepress/dist/
+      - name: Copy files
+        uses: canastro/copy-file-action@master
+        with:
+          # 源文件目录
+          source: CNAME
+          # 目标目录
+          target: docs/.vuepress/dist/
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
