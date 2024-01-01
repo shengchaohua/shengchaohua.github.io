@@ -1,7 +1,7 @@
 {
   "name": "shengchaohua.github.io",
   "version": "1.0.0",
-  "description": "",
+  "description": "This repo is built with Vue Press.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +15,8 @@
     "@vuepress/client": "2.0.0-rc.0",
     "vue": "^3.4.3",
     "vuepress": "2.0.0-rc.0"
+  },
+  "directories": {
+    "doc": "docs"
   }
 }

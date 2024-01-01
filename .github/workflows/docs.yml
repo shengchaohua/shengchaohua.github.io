@@ -1,0 +1,61 @@
+# 工作流名称，会出现在 GitHub 仓库的 Actions 选项栏中
+name: Deploy my blog
+
+# 指定工作流的触发事件，此处为 push 事件，表示在本地 push 指定分支至 github 仓库时触发工作流
+on:
+  push:
+    branches:
+      # 指定通过push触发工作流时的分支
+      - master
+
+# jobs 表示将当前“部署文档”工作流的所有任务分组在一起，并定义一个名为 deploy-gh-pages 的任务
+jobs:
+  docs:
+    # 配置任务运行在最新的 Ubuntu Linux 运行器
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_VERSION: '18'
+
+    # steps 表示将 deploy-gh-pages 任务下的所有步骤分为一组，嵌套的每一个条目都是一个独立的 action 或者 shell 脚本
+    steps:
+      - name: Checkout
+        # uses 表示当前步骤使用 actions/checkout 动作的v3大版本 ，这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的代码（比如构建或者测试工具）
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+
+      # 安装指定版本的 Node.js，让后续步骤可使用 npm 和 node 命令
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: pnpm
+
+      - name: Install Dependencies
+        # run 表示告诉任务在运行器上执行一个命令
+        # 项目中必须有 pnpm-lock.json
+        run: pnpm install --frozen-lockfile
+
+      - name: Build documentation site
+        run: pnpm docs:build
+
+#      # 复制根目录下的“百度网站收录认证文件”到构建的dist目录
+#      - name: Copy baidu-verify file
+#        uses: canastro/copy-file-action@master
+#        with:
+#          # 源文件目录
+#          source: baidu_verify_codeva-p5FuxDFHWV.html
+#          # 目标目录
+#          target: docs/.vuepress/dist/
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          # 设置部署文档所在的分支名称
+          branch: github-pages
+          # 所部署文档的目录
+          build_dir: docs/.vuepress/dist
