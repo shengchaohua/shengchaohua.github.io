@@ -56,6 +56,8 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v4
         with:
           # 设置部署文档所在的分支名称
-          branch: github-pages
+          target_branch: github-pages
           # 所部署文档的目录
           build_dir: docs/.vuepress/dist
+        env:
+          GH_PAT: ${{ secrets.ACCESS_TOKEN }}
