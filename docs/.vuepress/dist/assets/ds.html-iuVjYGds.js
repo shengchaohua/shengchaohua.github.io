@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as a,a as e,b as o}from"./app-kV4LXflc.js";const d={},c=e("h2",{id:"ds-demo",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#ds-demo","aria-hidden":"true"},"#"),o(" DS demo")],-1),r=[c];function n(_,i){return t(),a("div",null,r)}const l=s(d,[["render",n],["__file","ds.html.vue"]]);export{l as default};
