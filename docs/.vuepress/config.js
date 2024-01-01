@@ -46,10 +46,15 @@ export default defineUserConfig({
                 {
                     text: '算法',
                     collapsible: true,
-                    children: [''],
+                    children: [
+                        '/da/alg/README.md',
+                    ],
                 },
             ],
         },
-        sidebarDepth: 1,
+        sidebarDepth: 0,
+
+        contributors: false,
+        lastUpdatedText: "上次更新时间",
     }),
 })
