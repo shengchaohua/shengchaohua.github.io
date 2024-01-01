@@ -6,7 +6,7 @@ on:
   push:
     branches:
       # 指定通过push触发工作流时的分支
-      - main
+      - master
 
 # jobs 表示将当前“部署文档”工作流的所有任务分组在一起，并定义一个名为 deploy-gh-pages 的任务
 jobs:
@@ -40,7 +40,7 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
           npm run docs:build
-          > src/.vuepress/dist/.nojekyll
+          > docs/.vuepress/dist/.nojekyll
 
 #      # 复制根目录下的“百度网站收录认证文件”到构建的dist目录
 #      - name: Copy baidu-verify file
@@ -49,7 +49,7 @@ jobs:
 #          # 源文件目录
 #          source: baidu_verify_codeva-p5FuxDFHWV.html
 #          # 目标目录
-#          target: src/.vuepress/dist/
+#          target: docs/.vuepress/dist/
 
       - name: Deploy docs
         uses: JamesIves/github-pages-deploy-action@v4
@@ -57,7 +57,7 @@ jobs:
           # 设置部署文档所在的分支名称
           branch: github-pages
           # 所部署文档的目录
-          folder: src/.vuepress/dist
+          folder: docs/.vuepress/dist
 
 #      # 同步仓库代码到Gitee
 #      - name: Sync repo to Gitee
