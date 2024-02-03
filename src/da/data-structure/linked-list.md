@@ -3,8 +3,6 @@ title: 链表
 ---
 
 
-[[toc]]
-
 ## 说明
 
 链表结点的表示如下所示：
@@ -50,7 +48,7 @@ public class ListNode {
 Python:
 
 ```python
-# Definition for double-linked list.
+## Definition for double-linked list.
 class DoubleListNode:
     def __init__(self, val=0, pre=None, next=None):
         self.val = val
@@ -86,11 +84,11 @@ public class ListNode {
 
 
 
-## 编程题
+## Leetcode 编程题
 
-### Leetcode 206. 反转链表
+### 206. 反转链表
 
-> [Leetcode 206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/ "Leetcode 206. 反转链表")
+> [206. 反转链表](https://leetcode-cn.com/problems/reverse-linked-list/ "206. 反转链表")
 
 一、题目
 
@@ -150,9 +148,11 @@ class Solution:
         return res
 ```
 
-### Leetcode 92. 反转链表 II
 
-> [Leetcode 92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/comments/ "Leetcode 92. 反转链表 II")
+
+### 92. 反转链表 II
+
+> [92. 反转链表 II](https://leetcode-cn.com/problems/reverse-linked-list-ii/comments/ "92. 反转链表 II")
 
 一、题目
 
@@ -189,9 +189,11 @@ class Solution:
         return dummy.next
 ```
 
-### Leetcode 24. 两两交换链表中的节点
 
-> [Leetcode 24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/ "Leetcode 24. 两两交换链表中的节点")
+
+### 24. 两两交换链表中的节点
+
+> [24. 两两交换链表中的节点](https://leetcode-cn.com/problems/swap-nodes-in-pairs/ "24. 两两交换链表中的节点")
 
 一、题目
 
@@ -220,9 +222,11 @@ class Solution:
         return dummy.next
 ```
 
-### Leetcode 25. K 个一组翻转链表
 
-> [Leetcode 25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/ "Leetcode 25. K 个一组翻转链表")
+
+### 25. K 个一组翻转链表
+
+> [25. K 个一组翻转链表](https://leetcode-cn.com/problems/reverse-nodes-in-k-group/ "25. K 个一组翻转链表")
 
 一、题目
 
@@ -262,9 +266,11 @@ class Solution:
         return dummy.next
 ```
 
-### Leetcode 234. 链表回文
 
-> [Leetcode 234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/ "Leetcode 234. 回文链表")
+
+### 234. 链表回文
+
+> [234. 回文链表](https://leetcode-cn.com/problems/palindrome-linked-list/ "234. 回文链表")
 
 一、题目
 
@@ -297,9 +303,11 @@ class Solution:
         return not left and not right
 ```
 
-### Leetcode 143. 重排链表
 
-> [Leetcode 143. 重排链表](https://leetcode-cn.com/problems/reorder-list/ "Leetcode 143. 重排链表")
+
+### 143. 重排链表
+
+> [143. 重排链表](https://leetcode-cn.com/problems/reorder-list/ "143. 重排链表")
 
 一、题目
 
@@ -321,21 +329,21 @@ class Solution:
         """
         if not head or not head.next:
             return
-        # 快慢指针，确定重点
+        ## 快慢指针，确定重点
         slow, fast = head, head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
         right = slow.next
         slow.next = None
-        # 右半部分链表反转
+        ## 右半部分链表反转
         pre, cur = None, right 
         while cur:
             temp = cur.next 
             cur.next = pre
             pre = cur
             cur = temp
-        # 拼接两个链表
+        ## 拼接两个链表
         left, right = head, pre
         while left and right:
             temp2 = left.next
@@ -346,9 +354,11 @@ class Solution:
             right = temp3
 ```
 
-### Leetcode 61. 旋转链表
 
-> [Leetcode 61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/ "Leetcode 61. 旋转链表")
+
+### 61. 旋转链表
+
+> [61. 旋转链表](https://leetcode-cn.com/problems/rotate-list/ "61. 旋转链表")
 
 一、题目
 
@@ -378,7 +388,7 @@ class Solution:
         if k == 0:
             return head
         
-        cur.next = head  # 首尾相连
+        cur.next = head  ## 首尾相连
         for i in range(count - k):
             cur = cur.next
 
@@ -387,9 +397,11 @@ class Solution:
         return nxt
 ```
 
-### Leetcode 21. 合并两个有序链表
 
-> [Leetcode 21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/ "Leetcode 21. 合并两个有序链表")
+
+### 21. 合并两个有序链表
+
+> [21. 合并两个有序链表](https://leetcode-cn.com/problems/merge-two-sorted-lists/ "21. 合并两个有序链表")
 
 一、题目
 
@@ -435,7 +447,9 @@ class Solution:
         return l2
 ```
 
-### Leetcode 23. 合并K个有序链表
+
+
+### 23. 合并K个有序链表
 
 > [https://leetcode.cn/problems/merge-k-sorted-lists/](https://leetcode.cn/problems/merge-k-sorted-lists/ "https://leetcode.cn/problems/merge-k-sorted-lists/")
 
@@ -507,7 +521,7 @@ class Solution:
 class Solution:
     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
         def merge_two_sorted_list(l1, l2):
-            # 与 方法1）相同
+            ## 与 方法1）相同
             pass
 
         def helper(lists):
@@ -573,9 +587,11 @@ class Solution {
 
 ```
 
-### Leetcode 147. 对链表进行插入排序
 
-> [Leetcode 147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/ "Leetcode 147. 对链表进行插入排序")
+
+### 147. 对链表进行插入排序
+
+> [147. 对链表进行插入排序](https://leetcode-cn.com/problems/insertion-sort-list/ "147. 对链表进行插入排序")
 
 一、题目
 
@@ -615,7 +631,7 @@ class Solution:
             pre = dummy
             while pre.next.val <= cur.next.val:
                 pre = pre.next
-            # 插入法，把nxt插在pre后面
+            ## 插入法，把nxt插在pre后面
             nxt = cur.next
             cur.next = nxt.next
             nxt.next = pre.next
@@ -624,9 +640,11 @@ class Solution:
         return dummy.next
 ```
 
-### Leetcode 148. 排序链表 - O(nlgn)
 
-> [Leetcode 148. 排序链表](https://leetcode-cn.com/problems/sort-list/ "Leetcode 148. 排序链表")
+
+### 148. 排序链表 - O(nlgn)
+
+> [148. 排序链表](https://leetcode-cn.com/problems/sort-list/ "148. 排序链表")
 
 一、题目
 
@@ -748,9 +766,11 @@ class Solution {
 }
 ```
 
-### Leetcode 2. 两数相加
 
-> [Leetcode 2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/ "Leetcode 2. 两数相加")
+
+### 2. 两数相加
+
+> [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/ "2. 两数相加")
 
 一、题目
 
@@ -780,9 +800,11 @@ class Solution:
         return dummy.next
 ```
 
-### Leetcode 445. 两数相加 II
 
-> [Leetcode 445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/ "Leetcode 445. 两数相加 II")
+
+### 445. 两数相加 II
+
+> [445. 两数相加 II](https://leetcode-cn.com/problems/add-two-numbers-ii/ "445. 两数相加 II")
 
 一、题目
 
@@ -818,9 +840,11 @@ class Solution:
         return ans
 ```
 
-### Leetcode 160. 相交链表
 
-> https://leetcode.cn/problems/intersection-of-two-linked-lists
+
+### 160. 相交链表
+
+> [160. 相交链表](https://leetcode.cn/problems/intersection-of-two-linked-lists)
 
 一、题目
 
@@ -850,9 +874,11 @@ class Solution:
         return pA
 ```
 
-### Leetcode 141. 环形链表
 
-> [https://leetcode.cn/problems/linked-list-cycle/](https://leetcode.cn/problems/linked-list-cycle/ "https://leetcode.cn/problems/linked-list-cycle/")
+
+### 141. 环形链表
+
+> [141. 环形链表](https://leetcode.cn/problems/linked-list-cycle/)
 
 一、题目
 
@@ -906,7 +932,9 @@ class Solution:
 
 ```
 
-### Leetcode 142. 环形链表II
+
+
+### 142. 环形链表II
 
 > [https://leetcode.cn/problems/linked-list-cycle-ii/](https://leetcode.cn/problems/linked-list-cycle-ii/ "https://leetcode.cn/problems/linked-list-cycle-ii/")
 
@@ -965,7 +993,9 @@ func detectCycle(head *ListNode) *ListNode {
 
 ```
 
-### Leetcode 138. 复制带随机指针的链表
+
+
+### 138. 复制带随机指针的链表
 
 > [https://leetcode.cn/problems/copy-list-with-random-pointer/](https://leetcode.cn/problems/copy-list-with-random-pointer/ "https://leetcode.cn/problems/copy-list-with-random-pointer/")
 
@@ -997,7 +1027,7 @@ func detectCycle(head *ListNode) *ListNode {
 
 ```python
 """
-# Definition for a Node.
+## Definition for a Node.
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
         self.val = int(x)
@@ -1027,5 +1057,4 @@ class Solution:
             p = p.next
         
         return fake.next
-
 ```

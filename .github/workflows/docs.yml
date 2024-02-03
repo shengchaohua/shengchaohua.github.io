@@ -10,7 +10,7 @@ on:
 
 # jobs 表示将当前“部署文档”工作流的所有任务分组在一起，并定义一个名为 deploy-gh-pages 的任务
 jobs:
-  docs:
+  deploy-github-pages:
     # 配置任务运行在最新的 Ubuntu Linux 运行器
     runs-on: ubuntu-latest
 

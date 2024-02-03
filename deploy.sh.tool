@@ -7,7 +7,7 @@ set -e
 pnpm run docs:build
 
 # 进入生成的文件夹
-cd docs/.vuepress/dist
+cd src/.vuepress/dist
 
 git init
 git add -A
