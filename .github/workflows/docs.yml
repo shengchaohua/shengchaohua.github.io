@@ -27,6 +27,8 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
+        with:
+          run_install: true
 
       # 安装指定版本的 Node.js，让后续步骤可使用 npm 和 node 命令
       - name: Install Node.js
