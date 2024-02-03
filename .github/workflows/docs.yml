@@ -51,7 +51,7 @@ jobs:
           # 源文件目录
           source: CNAME
           # 目标目录
-          target: docs/.vuepress/dist/
+          target: src/.vuepress/dist/
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
@@ -59,6 +59,6 @@ jobs:
           # 设置部署文档所在的分支名称
           target_branch: github-pages
           # 所部署文档的目录
-          build_dir: docs/.vuepress/dist
+          build_dir: src/.vuepress/dist
         env:
           GH_PAT: ${{ secrets.ACCESS_TOKEN }}
