@@ -1,8 +1,11 @@
 ---
-icon: circle-info
-cover: /assets/images/cover3.jpg
+title: 网站相关
 ---
 
-# 介绍页
+## 关于网站
 
-将你的个人介绍和档案放置在此处。
+TODO
+
+## 关于作者
+
+TODO

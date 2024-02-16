@@ -1,5 +1,5 @@
 ---
-title: MySQL
+title: 算法
 index: false
 ---
 

@@ -31,7 +31,7 @@ export default hopeTheme({
 
   // 博客相关
   blog: {
-    description: "一个普通的程序员",
+    description: "一名普通的程序员",
     intro: "/intro.html",
     medias: {
       Email: "mailto:shengchaohua1995@qq.com",
@@ -41,9 +41,9 @@ export default hopeTheme({
 
   // 加密配置
   encrypt: {
-    config: {
-      "/demo/encrypt.html": ["1234"],
-    },
+    // config: {
+    //   "/demo/encrypt.html": ["1234"],
+    // },
   },
 
   // 多语言配置
@@ -52,7 +52,7 @@ export default hopeTheme({
   },
 
   // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
+  hotReload: true,
 
   // 在这里配置主题提供的插件
   plugins: {
