@@ -6,7 +6,7 @@ on:
   push:
     branches:
       # 指定通过push触发工作流时的分支
-      - master
+      - main
 
 # jobs 表示将当前“部署文档”工作流的所有任务分组在一起，并定义一个名为 deploy-gh-pages 的任务
 jobs:
