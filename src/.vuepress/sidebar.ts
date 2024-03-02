@@ -1,7 +1,7 @@
 import {sidebar} from "vuepress-theme-hope";
 
 export default sidebar({
-  "/da/": "structure",
+  "/computer-basic/": "structure",
   "/pl/": "structure",
   "/database/": "structure",
   // fallback

@@ -6,7 +6,9 @@ export default navbar([
     text: "计算机基础",
     icon: "pen-to-square",
     children: [
-      {text: "数据结构与算法", link: "da/"},
+      {text: "数据结构与算法", link: "computer-basic/da/"},
+      {text: "计算机网络", link: "computer-basic/computer-network/"},
+      {text: "操作系统", link: "computer-basic/os/"},
     ]
   },
   {

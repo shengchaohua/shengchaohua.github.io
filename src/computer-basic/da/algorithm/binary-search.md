@@ -1,6 +1,6 @@
 ---
 title: 二分搜索
-order: 2
+order: 1
 ---
 
 
@@ -8,7 +8,7 @@ order: 2
 
 ### 在左边插入
 
-> [Leetcode 35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/ "Leetcode 35. 搜索插入位置")
+> [35. 搜索插入位置](https://leetcode-cn.com/problems/search-insert-position/ "35. 搜索插入位置")
 
 一、题目
 
@@ -34,9 +34,11 @@ class Solution:
         return low
 ```
 
+
+
 ### 在右边插入
 
-> [Leetcode 744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/ "Leetcode 744. 寻找比目标字母大的最小字母")
+> [744. 寻找比目标字母大的最小字母](https://leetcode-cn.com/problems/find-smallest-letter-greater-than-target/ "744. 寻找比目标字母大的最小字母")
 
 一、题目
 
@@ -62,17 +64,17 @@ class Solution:
                 high = mid
                 
         if low == len(letters):
-            return letters[0] 
+            return letters[0]
         return letters[low]
 ```
 
 
 
-## Leetcode 编程题
+## 编程题
 
 ### 704. 二分查找
 
-> [Leetcode 704. 二分查找](https://leetcode-cn.com/problems/binary-search/ "Leetcode 704. 二分查找")
+> [704. 二分查找](https://leetcode-cn.com/problems/binary-search/ "704. 二分查找")
 
 一、题目
 
@@ -97,13 +99,14 @@ class Solution:
         
         if low >= len(nums) or nums[low] != target:
             return -1
-        
         return low
 ```
 
+
+
 ### 34. 在排序数组中查找元素的第一个和最后一个位置
 
-> [Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/ "Leetcode 34. 在排序数组中查找元素的第一个和最后一个位置")
+> [34. 在排序数组中查找元素的第一个和最后一个位置](https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array/ "34. 在排序数组中查找元素的第一个和最后一个位置")
 
 一、题目
 
@@ -150,9 +153,11 @@ class Solution:
         return [low, high2 - 1]
 ```
 
+
+
 ### 852. 山脉数组的峰顶索引
 
-> [Leetcode 852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/ "Leetcode 852. 山脉数组的峰顶索引")
+> [852. 山脉数组的峰顶索引](https://leetcode-cn.com/problems/peak-index-in-a-mountain-array/ "852. 山脉数组的峰顶索引")
 
 一、题目
 
@@ -181,20 +186,23 @@ class Solution:
                 return mid
 ```
 
+
+
 ### 153. 寻找旋转排序数组中的最小值
 
-> [Leetcode 153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/ "Leetcode 153. 寻找旋转排序数组中的最小值")
+> [153. 寻找旋转排序数组中的最小值](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/ "153. 寻找旋转排序数组中的最小值")
 
 一、题目
 
-假设按照升序排序的数组在预先未知的某个点上进行了旋转。
-( 例如，数组`[0,1,2,4,5,6,7]`可能变为`[4,5,6,7,0,1,2]`)。
+假设按照升序排序的数组在预先未知的某个点上进行了旋转。( 例如，数组`[0,1,2,4,5,6,7]`可能变为`[4,5,6,7,0,1,2]`)。
+
 请找出其中最小的元素。
+
 你可以假设数组中不存在重复元素。
 
 二、解析
 
-> 参考 [Leetcode官方题解](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/solution/xun-zhao-xuan-zhuan-pai-lie-shu-zu-zhong-de-zui-xi/ "Leetcode官方题解")
+> [Leetcode官方题解](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array/solution/xun-zhao-xuan-zhuan-pai-lie-shu-zu-zhong-de-zui-xi/ "Leetcode官方题解")
 
 代码如下：
 
@@ -222,9 +230,11 @@ class Solution(object):
         return -1
 ```
 
+
+
 ### 33. 搜索旋转排序数组
 
-> [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/ "Leetcode 33. 搜索旋转排序数组")
+> [搜索旋转排序数组](https://leetcode-cn.com/problems/search-in-rotated-sorted-array/ "33. 搜索旋转排序数组")
 
 一、题目
 
@@ -271,9 +281,11 @@ class Solution:
         return -1
 ```
 
+
+
 ### 540. 有序数组中的单一元素
 
-> [Leetcode 540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/ "Leetcode 540. 有序数组中的单一元素")
+> [540. 有序数组中的单一元素](https://leetcode-cn.com/problems/single-element-in-a-sorted-array/ "540. 有序数组中的单一元素")
 
 一、题目
 
@@ -311,7 +323,7 @@ class Solution:
 
 ### 69. x的平方根
 
-> [Leetcode 69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/ "Leetcode 69. x 的平方根")
+> [69. x 的平方根](https://leetcode-cn.com/problems/sqrtx/ "69. x 的平方根")
 
 一、题目
 
@@ -361,7 +373,7 @@ class Solution:
 
 ### 50. x的n次幂（快速幂）
 
-> [Leetcode 50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/ "Leetcode 50. Pow(x, n)")
+> [50. Pow(x, n)](https://leetcode-cn.com/problems/powx-n/ "50. Pow(x, n)")
 
 一、题目
 
@@ -387,6 +399,8 @@ class Solution:
         
         return quickMul(x, n) if n >= 0 else 1.0 / quickMul(x, -n)
 ```
+
+
 
 ### 4. 寻找两个正序数据的中位数
 
@@ -444,3 +458,8 @@ class Solution:
             return getKthElement((totalLength + 1) // 2)
         return (getKthElement(totalLength // 2) + getKthElement(totalLength // 2 + 1)) / 2
 ```
+
+2）划分数组
+
+TODO
+

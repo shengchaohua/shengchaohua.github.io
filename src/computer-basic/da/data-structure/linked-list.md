@@ -1,13 +1,20 @@
 ---
 title: 链表
+order: 2
 ---
 
 
-## 说明
+## 基础
 
-链表结点的表示如下所示：
+链表是一种动态数据结构，由指针把若干个结点连接成链状结构。
 
-1）单链表结点
+在创建链表时，无须知道链表的长度。当插入一个结点时，只需要为新结点分配内存，并调整指针的指向来确保新结点被链接到链表当中。链表的内存不是在创建链表时一次性分配的，而是每添加一个结点分配一次内存，所以链表的空间效率比数组高。
+
+但是，由于链表的内存不是连续的。如果想访问链表的结点，只能从头结点开始遍历链表，因此链表的访问时间效率低。
+
+常见的链表有单链表，双链表。单链表中的结点有指向下一个结点的指针，而双链表既有指向上一个结点的指针，也有指向下一个结点的指针。如果一个链表的头尾结点相连，形成了一个环路，这种链表可以称为循环链表。
+
+### 单链表结点
 
 Python：
 
@@ -24,8 +31,8 @@ Golang：
 ```go
 // Definition for singly-linked list.
 type ListNode strcut {
-  Val  int
-  Next *ListNode
+	Val  int
+	Next *ListNode
 }
 ```
 
@@ -33,19 +40,19 @@ Java：
 
 ```java
 public class ListNode {
-  int val;
-  ListNode next;
-  ListNode() {}
-  ListNode(int val) { this.val = val; }
-  ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 ```
 
 
 
-2）双链表结点
+### 双链表结点
 
-Python:
+Python：
 
 ```python
 ## Definition for double-linked list.
@@ -61,9 +68,9 @@ Golang：
 ```go
 // Definition for double-linked list.
 type DoubleListNode strcut {
-  Val  int
-  Pre  *DoubleListNode
-  Next *DoubleListNode
+    Val  int
+    Pre  *DoubleListNode
+    Next *DoubleListNode
 }
 ```
 
@@ -71,12 +78,12 @@ Java:
 
 ```java
 public class ListNode {
-  int val;
-  ListNode pre;
-  ListNode next;
-  ListNode() {}
-  ListNode(int val) { this.val = val; }
-  ListNode(int val, ListNode pre, ListNode next) { this.val = val; this.pre = pre; this.next = next; }
+    int val;
+    ListNode pre;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode pre, ListNode next) { this.val = val; this.pre = pre; this.next = next; }
 }
 ```
 
@@ -312,7 +319,9 @@ class Solution:
 一、题目
 
 给定一个单链表 L：L0→L1→…→Ln-1→Ln ，
+
 将其重新排列后变为： L0→Ln→L1→Ln-1→L2→Ln-2→…
+
 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
 
 二、解析
@@ -459,7 +468,7 @@ class Solution:
 
 请你将所有链表合并到一个升序链表中，返回合并后的链表。
 
-**示例 1：**
+示例 1：
 
 ```text
 输入：lists = [[1,4,5],[1,3,4],[2,6]]
@@ -472,7 +481,6 @@ class Solution:
 ]
 将它们合并到一个有序链表中得到。
 1->1->2->3->4->4->5->6
-
 ```
 
 二、解析
@@ -595,9 +603,9 @@ class Solution {
 
 一、题目
 
-给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回排序后链表的头。
+给定单个链表的头 head ，使用 插入排序 对链表进行排序，并返回 排序后链表的头 。
 
-插入排序算法的步骤:
+插入排序 算法的步骤:
 
 1. 插入排序是迭代的，每次只移动一个元素，直到所有元素可以形成一个有序的输出列表。
 2. 每次迭代中，插入排序只从输入数据中移除一个待排序的元素，找到它在序列中适当的位置，并将其插入。
@@ -612,6 +620,8 @@ class Solution {
 二、解析
 
 使用 next 指针比较方便，不需要保存当前结点的前一个结点。
+
+代码如下：
 
 ```python
 class Solution:
@@ -942,7 +952,7 @@ class Solution:
 
 给定一个链表的头节点  head ，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
 
-如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数 pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
+如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。 为了表示给定链表中的环，评测系统内部使用整数pos 来表示链表尾连接到链表中的位置（索引从 0 开始）。如果 pos 是 -1，则在该链表中没有环。注意：pos 不作为参数进行传递，仅仅是为了标识链表的实际情况。
 
 不允许修改链表。
 
@@ -1026,15 +1036,6 @@ func detectCycle(head *ListNode) *ListNode {
 代码如下：
 
 ```python
-"""
-## Definition for a Node.
-class Node:
-    def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
-        self.val = int(x)
-        self.next = next
-        self.random = random
-"""
-
 class Solution:
     def copyRandomList(self, head: 'Node') -> 'Node':
         if not head:
