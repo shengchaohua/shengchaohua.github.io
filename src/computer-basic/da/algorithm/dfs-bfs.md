@@ -1,6 +1,11 @@
 ---
 title: DFS&BFS
 order: 5
+category: 算法
+tag:
+  - BFS
+  - DFS
+  - Leetcode
 ---
 
 

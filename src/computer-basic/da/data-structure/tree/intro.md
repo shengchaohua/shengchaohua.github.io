@@ -1,6 +1,11 @@
 ---
 title: 介绍
 order: 1
+category: 数据结构
+tag:
+  - 树
+  - 二叉树
+  - N叉树
 ---
 
 <!-- more -->

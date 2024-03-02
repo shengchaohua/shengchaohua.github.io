@@ -1,6 +1,11 @@
 ---
 title: 哈希表
 order: 7
+category: 数据结构
+tag:
+  - 哈希表
+  - 字典
+  - Leetcode
 ---
 
 <!-- more -->

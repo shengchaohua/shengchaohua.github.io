@@ -1,6 +1,10 @@
 ---
 title: N 叉树
 order: 3
+category: 数据结构
+tag:
+  - N叉树
+  - Leetcode
 ---
 
 <!-- more -->

@@ -1,6 +1,10 @@
 ---
 title: 链表
 order: 2
+category: 数据结构
+tag:
+  - 链表
+  - Leetcode
 ---
 
 <!-- more -->

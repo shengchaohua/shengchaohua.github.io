@@ -1,6 +1,10 @@
 ---
 title: 图
 order: 2
+category: 数据结构
+tag:
+  - 图
+  - Leetcode
 ---
 
 <!-- more -->

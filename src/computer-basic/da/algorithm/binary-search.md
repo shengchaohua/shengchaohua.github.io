@@ -1,6 +1,10 @@
 ---
 title: 二分搜索
 order: 1
+category: 算法
+tag:
+  - 二分搜索
+  - Leetcode
 ---
 
 <!-- more -->

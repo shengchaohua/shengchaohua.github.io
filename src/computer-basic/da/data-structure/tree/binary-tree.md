@@ -1,6 +1,10 @@
 ---
 title: 二叉树
 order: 2
+category: 数据结构
+tag:
+  - 二叉树
+  - Leetcode
 ---
 
 <!-- more -->

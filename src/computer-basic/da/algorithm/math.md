@@ -1,6 +1,10 @@
 ---
 title: 数学
 order: 6
+category: 算法
+tag:
+  - 数学
+  - Leetcode
 ---
 
 <!-- more -->

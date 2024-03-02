@@ -1,6 +1,10 @@
 ---
 title: 栈
 order: 3
+category: 数据结构
+tag:
+  - 栈
+  - Leetcode
 ---
 
 <!-- more -->

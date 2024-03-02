@@ -1,6 +1,10 @@
 ---
 title: 排序
 order: 1
+category: 算法
+tag:
+  - 排序
+  - Leetcode
 ---
 
 <!-- more -->

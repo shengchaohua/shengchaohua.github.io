@@ -1,6 +1,10 @@
 ---
 title: 贪心
 order: 4
+category: 算法
+tag:
+  - 贪心
+  - Leetcode
 ---
 
 <!-- more -->

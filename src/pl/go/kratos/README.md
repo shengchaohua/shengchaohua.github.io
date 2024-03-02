@@ -1,4 +1,0 @@
----
-title: Kratos
-index: false
----

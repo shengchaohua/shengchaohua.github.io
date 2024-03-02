@@ -1,6 +1,10 @@
 ---
 title: 字符串
 order: 6
+category: 数据结构
+tag:
+  - 字符串
+  - Leetcode
 ---
 
 <!-- more -->

@@ -1,6 +1,10 @@
 ---
 title: 动态规划
 order: 3
+category: 算法
+tag:
+  - 动态规划
+  - Leetcode
 ---
 
 <!-- more -->

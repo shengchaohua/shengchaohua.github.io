@@ -1,6 +1,10 @@
 ---
 title: 队列
 order: 4
+category: 数据结构
+tag:
+  - 队列
+  - Leetcode
 ---
 
 <!-- more -->
