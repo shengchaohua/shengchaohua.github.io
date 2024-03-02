@@ -3,6 +3,7 @@ title: 栈
 order: 3
 ---
 
+<!-- more -->
 
 ## 基础
 

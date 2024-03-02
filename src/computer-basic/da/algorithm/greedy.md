@@ -3,7 +3,7 @@ title: 贪心
 order: 4
 ---
 
-
+<!-- more -->
 
 ## Leetcode 编程题
 

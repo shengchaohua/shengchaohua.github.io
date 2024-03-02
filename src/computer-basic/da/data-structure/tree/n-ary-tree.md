@@ -3,6 +3,7 @@ title: N 叉树
 order: 3
 ---
 
+<!-- more -->
 
 ## 基础
 

@@ -3,6 +3,7 @@ title: 数学
 order: 6
 ---
 
+<!-- more -->
 
 ## Leetcode 编程题
 

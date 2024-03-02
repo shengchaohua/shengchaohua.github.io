@@ -3,6 +3,7 @@ title: 堆
 order: 5
 ---
 
+<!-- more -->
 
 ## 基础
 
