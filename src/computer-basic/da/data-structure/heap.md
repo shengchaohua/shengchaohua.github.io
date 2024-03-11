@@ -79,11 +79,11 @@ def heap_sort(A):
 
 
 
-### 不同编程语言的支持
+### 不同编程语言中的实现
 
-#### Python
+1）Python
 
-Python 内置的 heapq 模块实现了最小堆，并提供了多个方法，如下所示：
+在 Python 中，内置的 heapq 模块提供了最小堆的实现，如下所示：
 
 ```python
 import heapq
@@ -99,9 +99,9 @@ heapq.heappushpop(nums, 4)
 item = heapq.heapreplace(heap, item) # pops and returns smallest item, and adds new item; the heap size is unchanged
 ```
 
-#### Java
+2）Java
 
-Java 集合中的 ProrityQueue 可以用来实现堆。
+在 Java 中，可以使用 ProrityQueue 可以用来实现堆。
 
 ```java
 import java.util.Comparator;
@@ -125,9 +125,9 @@ public class Heap {
 }
 ```
 
-#### Go
+3）Golang
 
-Go 语言内置的"container/heap"包实现了通用的最小堆，并提供了接口，便于实现自定义的堆。
+在 Golang 中，"container/heap"包实现了通用的最小堆，并提供了接口，便于实现自定义的堆。
 
 堆接口如下所示：
 
@@ -189,7 +189,9 @@ func main() {
 ```
 
 
+
 ## Leetcode 编程题
+
 ### 347. 前K个高频元素
 
 > [347. 前K个高频元素](https://leetcode.cn/problems/top-k-frequent-elements)

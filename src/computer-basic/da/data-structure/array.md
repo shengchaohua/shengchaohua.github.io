@@ -267,7 +267,6 @@ class Solution {
 ### 53. 最大子数组和
 
 > [53. 最大子序和](https://leetcode-cn.com/problems/maximum-subarray/ "53. 最大子序和")
-> [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/ "剑指 Offer 42. 连续子数组的最大和")
 
 一、题目
 
@@ -309,6 +308,155 @@ class Solution:
             if temp < 0:
                 temp = 0
         return max_sum
+```
+
+
+
+### 628. 三个数的最大乘积
+
+> [628. 三个数的最大乘积](https://leetcode.cn/problems/maximum-product-of-three-numbers/)
+
+一、题目
+
+给你一个整型数组 `nums` ，在数组中找出由三个数组成的最大乘积，并输出这个乘积。
+
+**示例 1：**
+
+```
+输入：nums = [1,2,3]
+输出：6
+```
+
+**示例 2：**
+
+```
+输入：nums = [1,2,3,4]
+输出：24
+```
+
+**示例 3：**
+
+```
+输入：nums = [-1,-2,-3]
+输出：-6
+```
+
+二、解析
+
+1）排序。时间复杂度 O(N logN)。代码略。
+
+2）线性扫描。时间复杂度 O(N)。
+
+代码如下：
+
+```go
+func maximumProduct(nums []int) int {
+    // 最小的和第二小的
+    min1, min2 := math.MaxInt64, math.MaxInt64
+    // 最大的、第二大的和第三大的
+    max1, max2, max3 := math.MinInt64, math.MinInt64, math.MinInt64
+
+    for _, x := range nums {
+        if x < min1 {
+            min2 = min1
+            min1 = x
+        } else if x < min2 {
+            min2 = x
+        }
+
+        if x > max1 {
+            max3 = max2
+            max2 = max1
+            max1 = x
+        } else if x > max2 {
+            max3 = max2
+            max2 = x
+        } else if x > max3 {
+            max3 = x
+        }
+    }
+
+    return max(min1*min2*max1, max1*max2*max3)
+}
+
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+```
+
+
+
+### 152. 乘积最大子数组
+
+> [152. 乘积最大子数组](https://leetcode.cn/problems/maximum-product-subarray/)
+
+一、题目
+
+给你一个整数数组 `nums` ，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。
+
+**示例 1:**
+
+```
+输入: nums = [2,3,-2,4]
+输出: 6
+解释: 子数组 [2,3] 有最大乘积 6。
+```
+
+二、解析
+
+> [官方题解](https://leetcode.cn/problems/maximum-product-subarray/solutions/250015/cheng-ji-zui-da-zi-shu-zu-by-leetcode-solution/)
+
+动态规划。
+
+Python 代码如下：
+
+```python
+class Solution:
+    def maxProduct(self, nums: List[int]) -> int:
+        size = len(nums)
+        maxf = [nums[0]] + [0] * (size - 1)
+        minf = [nums[0]] + [0] * (size - 1)
+        for i in range(1, size):
+            cur_max = maxf[i - 1] * nums[i]
+            cur_min = minf[i - 1] * nums[i]
+            maxf[i] = max(cur_max, max(nums[i], cur_min))
+            minf[i] = min(cur_min, min(nums[i], cur_max))
+        res = maxf[0]
+        for i in range(1, size):
+            res = max(res, maxf[i])
+        return res
+```
+
+Golang 代码如下，并优化了空间复杂度，
+
+```go
+func maxProduct(nums []int) int {
+    maxF, minF, ans := nums[0], nums[0], nums[0]
+    for i := 1; i < len(nums); i++ {
+        mx, mn := maxF, minF
+        maxF = max(mx * nums[i], max(nums[i], mn * nums[i]))
+        minF = min(mn * nums[i], min(nums[i], mx * nums[i]))
+        ans = max(maxF, ans)
+    }
+    return ans
+}
+
+func max(x, y int) int {
+    if x > y {
+        return x
+    }
+    return y
+}
+
+func min(x, y int) int {
+    if x < y {
+        return x
+    }
+    return y
+}
 ```
 
 
@@ -570,7 +718,7 @@ class Solution:
 
 
 
-### LCR 120. 寻找文件副本（数组中重复的数字）
+### LCR 120. LCR 120. 寻找文件副本（数组中重复的数字）
 
 > [LCR 120. 寻找文件副本](https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
 

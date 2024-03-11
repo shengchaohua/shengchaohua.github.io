@@ -6,7 +6,7 @@ title: 其他
 
 ## Leetcode 编程题
 
-### 146. LRU
+### 146. LRU 缓存
 
 > [146. LRU 缓存](https://leetcode.cn/problems/lru-cache/)
 
