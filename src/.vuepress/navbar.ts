@@ -28,6 +28,13 @@ export default navbar([
     ]
   },
   {
+    text: "消息队列",
+    icon: "pen-to-square",
+    children: [
+      {text: "Kafka", link: "mq/kafka/"},
+    ]
+  },
+  {
     text: "网站相关",
     icon: "pen-to-square",
     link: "intro.md",
