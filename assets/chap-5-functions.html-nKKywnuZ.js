@@ -1,0 +1,1 @@
+import{_ as c}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as e,c as t}from"./app-qKT_MvSj.js";const o={};function n(r,_){return e(),t("div")}const f=c(o,[["render",n],["__file","chap-5-functions.html.vue"]]);export{f as default};

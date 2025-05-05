@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o as c,c as t}from"./app-qKT_MvSj.js";const a={};function o(r,s){return c(),t("div")}const p=e(a,[["render",o],["__file","chap-3-basic-data-types.html.vue"]]);export{p as default};

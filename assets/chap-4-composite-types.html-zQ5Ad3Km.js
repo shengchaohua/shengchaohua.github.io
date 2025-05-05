@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c as t}from"./app-qKT_MvSj.js";const c={};function r(s,_){return o(),t("div")}const m=e(c,[["render",r],["__file","chap-4-composite-types.html.vue"]]);export{m as default};

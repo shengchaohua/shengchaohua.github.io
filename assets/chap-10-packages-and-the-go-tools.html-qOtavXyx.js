@@ -1,0 +1,1 @@
+import{_ as e}from"./plugin-vue_export-helper-x3n3nnut.js";import{o,c}from"./app-qKT_MvSj.js";const t={};function a(r,s){return o(),c("div")}const l=e(t,[["render",a],["__file","chap-10-packages-and-the-go-tools.html.vue"]]);export{l as default};
