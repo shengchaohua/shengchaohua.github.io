@@ -3,7 +3,7 @@ home: true
 layout: BlogHome
 icon: home
 title: 博客主页
-heroText: 绳子的学习笔记
+heroText: 学习笔记
 ---
 
 [//]: # (这是一个博客主页的案例。)
