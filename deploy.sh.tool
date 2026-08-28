@@ -14,6 +14,6 @@ git add -A
 git commit -m 'deploy: pages'
 
 # 发布到 https://<USERNAME>.github.io/<REPO>
-git push -f --set-upstream https://github.com/shengchaohua/shengchaohua.github.io master:github-pages
+git push -f git@github.com:shengchaohua/shengchaohua.github.io master:github-pages
 
 cd -
