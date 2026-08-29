@@ -61,6 +61,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
+        env:
+          # 为了兼容不同 action 的读取方式，也把 GITHUB_TOKEN 作为 env 传入
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           # 设置部署文档所在的分支名称
           target_branch: github-pages
