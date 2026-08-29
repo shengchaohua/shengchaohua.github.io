@@ -1,5 +1,8 @@
 ---
-title: 其他
+title: LRU
+category: 数据结构
+tag:
+  - LRU
 ---
 
 <!-- more -->
