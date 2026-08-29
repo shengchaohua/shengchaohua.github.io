@@ -1,11 +1,11 @@
 ---
 title: LRU
+order: 8
 category: 数据结构
 tag:
   - LRU
 ---
 
-<!-- more -->
 
 ## Leetcode 编程题
 

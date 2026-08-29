@@ -6,8 +6,8 @@ export default hopeTheme({
   hostname: "https://shengchaohua.cn",
 
   author: {
-    name: "绳子",
-    url: "https://shengchaohua.cn",
+    name: "shengchaohua",
+    url: "https://shengchaohua.top",
   },
 
   iconAssets: "fontawesome-with-brands",

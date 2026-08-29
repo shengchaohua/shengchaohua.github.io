@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: "/",
 
   lang: "zh-CN",
-  title: "MAX112",
+  title: "Max112",
   description: "",
 
   theme,

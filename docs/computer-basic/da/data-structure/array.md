@@ -12,25 +12,6 @@ tag:
 
 ## Leetcode 编程题
 
-### 1. 两数之和
-
-> [1. 两数之和](https://leetcode-cn.com/problems/two-sum/)
-
-代码如下：
-
-```python
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        saved = {}
-        for i, num in enumerate(nums):
-            if target - num in saved:
-                return [saved[target-num], i]
-            else:
-                saved[num] = i 
-```
-
-
-
 ### 167. 两数之和 II - 输入有序数组
 
 > [167. 两数之和 II - 输入有序数组](https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/ "167. 两数之和 II - 输入有序数组")
@@ -710,7 +691,7 @@ class Solution:
 
 
 
-### LCR 120. LCR 120. 寻找文件副本（数组中重复的数字）
+### LCR 120. 寻找文件副本
 
 > [LCR 120. 寻找文件副本](https://leetcode.cn/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/)
 
