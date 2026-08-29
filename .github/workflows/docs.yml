@@ -65,6 +65,6 @@ jobs:
           # 设置部署文档所在的分支名称
           target_branch: github-pages
           # 所部署文档的目录
-          build_dir: src/.vuepress/dist
+          build_dir: docs/.vuepress/dist
           # 使用内置令牌，依赖上方 permissions 配置
           github_token: ${{ secrets.GITHUB_TOKEN }}
