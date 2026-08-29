@@ -2,11 +2,11 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: "/shengchaohua.github.io/",
 
   lang: "zh-CN",
-  title: "绳子的学习笔记",
-  description: "绳子的学习笔记",
+  title: "Max",
+  description: "",
 
   theme,
 
