@@ -26,7 +26,7 @@ jobs:
     # steps 表示将 deploy-gh-pages 任务下的所有步骤分为一组，嵌套的每一个条目都是一个独立的 action 或者 shell 脚本
     steps:
       - name: Checkout
-        # uses 表示当前步骤使用 actions/checkout 动作的v3大版本 ，这是一个可以检出仓库代码到运行器的动作，它允许你运行脚本或者其他动作侵入你的�[...]
+        # uses 表示当前步骤使用 actions/checkout 动作的v3大版本 ，这是一个可以检出仓库代码到运行器的动作
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
